@@ -1,0 +1,76 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>    
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Properties\Resource.ru-RU.Designer.cs" />
+    <Compile Remove="Resource_en-US.Designer.cs" />
+    <Compile Remove="Resource_ru-RU.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Resource_en-US.resx" />
+    <EmbeddedResource Remove="Resource_ru-RU.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Crc32.NET" Version="1.2.0" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.45" />
+    <PackageReference Include="ManagedOpenSsl64" Version="0.6.1.3" />
+    <PackageReference Include="Math.Gmp.Native.NET" Version="2.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Sprintf.NET" Version="2.0.0" />
+    <PackageReference Include="Vereyon.Web.HtmlSanitizer" Version="1.6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.ru-RU.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="src\Image Processing and Generation\" />
+    <Folder Include="src\Human Language and Character Encoding Support\" />
+    <Folder Include="src\Mail Related Extensions\" />
+    <Folder Include="src\Database Extensions\" />
+    <Folder Include="src\Compression and Archive Extensions\" />
+    <Folder Include="src\Command Line Specific Extensions\" />
+    <Folder Include="src\Authentication Services\" />
+    <Folder Include="src\Affecting PHPs Behaviour\" />
+    <Folder Include="src\Audio Formats Manipulation\" />
+    <Folder Include="src\XML Manipulation\" />
+    <Folder Include="src\Windows Only Extensions\" />
+    <Folder Include="src\Web Services\" />
+    <Folder Include="src\Process Control Extensions\" />
+    <Folder Include="src\Non-Text MIME Output\" />
+  </ItemGroup>
+
+  <!--<ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>MAGNAMorph</_Parameter1>
+    </AssemblyAttribute>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>MAGNAMorph.Test</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>-->
+
+</Project>
